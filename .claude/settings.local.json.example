@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "weenhive": {
+      "type": "http",
+      "url": "https://weenhive.thisaan.cloud/mcp",
+      "headers": {
+        "x-api-key": "YOUR_WEENHIVE_API_KEY_HERE"
+      }
+    }
+  }
+}

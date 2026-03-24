@@ -1,0 +1,6 @@
+# API keys and local config — NEVER commit these
+.claude/settings.local.json
+.env
+
+# macOS
+.DS_Store
