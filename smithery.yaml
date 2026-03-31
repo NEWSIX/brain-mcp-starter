@@ -1,0 +1,30 @@
+# Smithery configuration for brain-mcp-starter
+# Docs: https://smithery.ai/docs/build/project-config/smithery-yaml
+
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    required:
+      - brainApiKey
+    properties:
+      brainApiKey:
+        type: string
+        description: "WeenHive Brain API key — get from https://weenhive.thisaan.cloud/settings/api-keys"
+      brainApiUrl:
+        type: string
+        description: "Override Brain endpoint URL (default: https://weenhive.thisaan.cloud/mcp)"
+        default: "https://weenhive.thisaan.cloud/mcp"
+  commandFunction: |
+    (config) => ({
+      command: "npx",
+      args: ["brain-mcp-starter"],
+      env: {
+        BRAIN_API_KEY: config.brainApiKey,
+        ...(config.brainApiUrl ? { BRAIN_API_URL: config.brainApiUrl } : {}),
+        MCP_TRANSPORT: "stdio"
+      }
+    })
+  exampleConfig:
+    brainApiKey: "whk_your_api_key_here"
+    brainApiUrl: "https://weenhive.thisaan.cloud/mcp"
