@@ -168,6 +168,7 @@ The legacy SSE transport (`/mcp/sse`) is deprecated as of MCP spec 2025-03-26. U
 
 ## Related Resources
 
+- [WeenHive Brain — Landing Page](https://newsix.github.io/weenhive-brain-landing/)
 - [MCP Specification](https://modelcontextprotocol.io/specification)
 - [Claude Code MCP Docs](https://docs.anthropic.com/en/docs/claude-code/mcp)
 - [WeenHive](https://weenhive.thisaan.cloud)
